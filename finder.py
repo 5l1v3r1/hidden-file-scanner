@@ -2,13 +2,13 @@ import os,filetype
  
 # Set the directory you want to start from
 rootDir = '/home'
+t=raw_input("Please enter a file type to find : ")
 for dirName, subdirList, fileList in os.walk(rootDir):
-    #print('Found directory: %s' % dirName)
     for fname in fileList:
         try:
            f=filetype.guess(dirName+'/'+fname)
         except IOError:
                pass
         if f is not None:
-           if f.mime=='video/mp4':
+           if f.extension==t:
               print "video found at",dirName,fname,f.mime,f.extension
