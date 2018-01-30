@@ -1,4 +1,4 @@
-# find-hidden-files
+# hidden-files-scanner
 
 python finder.py # default mp4
 
