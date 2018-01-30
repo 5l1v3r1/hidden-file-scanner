@@ -11,4 +11,4 @@ for dirName, subdirList, fileList in os.walk(rootDir):
                pass
         if f is not None:
            if f.extension==t:
-              print "video found at",dirName,fname,f.mime,f.extension
+              print "{} video found at".format(f.extension),dirName,fname,f.mime
